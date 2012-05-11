@@ -9,7 +9,6 @@
  *
  *	LIP6
  *	http://www.lisp.ipv6.lip6.fr
- *	Thu Apr  12 00:00:00
  *
  *Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -524,10 +523,7 @@ void print_map_register(map_register_ptr,length)
 }
 
 
-
-
 //Dump as hexa
-
 void hexout(unsigned char *data, int datalen) {
 
 	printf("0x");
@@ -535,7 +531,6 @@ void hexout(unsigned char *data, int datalen) {
 		printf("%02x",(unsigned char)*data++);
 	printf("\n");
 }
-
 
 
 //Create nonce by ramdom 

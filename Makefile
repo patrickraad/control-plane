@@ -62,6 +62,11 @@ ${EXE}: ${OBJ} ${INC} Makefile
 ${MAN}: ${MANSRC}
 	groff -t -e -mandoc -Tascii ${MANSRC} | col -bx > ${MANOUT}
 
+install:
+	/bin/cp ${EXE} /sbin/
+	/bin/chmod a+x /sbin/${EXE}
+	/bin/cp lisp /etc/rc.d/
+	/bin/chmod a+x /etc/rc.d/lisp
+	/bin/cp register_parameters.txt /etc/ 
 clean:
 	/bin/rm -f ${OBJ} ${EXE} ${MANOUT} core a.out Make.log Make.err *~
-
